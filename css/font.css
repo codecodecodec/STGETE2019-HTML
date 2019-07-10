@@ -1,0 +1,33 @@
+@font-face {
+	font-family: "SummerFont";
+	src: url('../fonts/SUMMER.ttf');
+}
+
+@font-face {
+	font-family: "SummerFont";
+	font-weight: bold;
+	src: url('../fonts/SUMMER.ttf');
+}
+
+
+@font-face {
+	font-family: "SummerFlingFont";
+	src: url('../fonts/SummerFling-Medium.otf');
+}
+
+html {
+	font-family: "SummerFont", Helvetica, Arial, sans-serif;
+	color : black;
+	font-size: 30;
+}
+.liste
+{
+	font-family: "Arial";
+	font-size: 25;
+}
+
+@media only screen and (max-width: 767px) {
+  html {
+    font-size: 20;
+  }
+}

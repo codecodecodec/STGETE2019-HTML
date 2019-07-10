@@ -1,0 +1,85 @@
+<html>
+	<head>
+		<title>Bulletin de notes</title>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/font.css">
+		<meta charset="UTF-8">
+		<meta name="description" content="Projet Noel CCC 2018">
+		<meta name="author" content="CodeCodeCodec">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<body>
+		<div id="center">
+			<h1 class="clignote">Reponses :</h1>
+				<center>
+					<table class="tableau">
+						<thead>
+							<td class="note"></td>
+							<td class="note">Ta reponse</td>
+							<td class="note">La bonne reponse</td>
+						</thead>
+						<tr>
+							<td class="note">Question 1</td>
+							<td class="note" id="rep1"></td>
+							<td class="note">C'était la reponse 1</td>
+						</tr>
+						<tr>
+							<td class="note">Question 2</td>
+							<td class="note" id="rep2"></td>
+							<td class="note">C'était la reponse 2</td>
+						</tr>
+						<tr>
+							<td class="note">Question 3</td>
+							<td class="note" id="rep3"></td>
+							<td class="note">C'était la reponse 1</td>
+						</tr>
+						<tr>
+							<td class="note">Question 4</td>
+							<td class="note" id="rep4"></td>
+							<td class="note">C'était la reponse 3</td>
+						</tr>
+						<tr>
+							<td class="note">Question 5</td>
+							<td class="note" id="rep5"></td>
+							<td class="note">C'était la reponse 5</td>
+						</tr>
+					</table>
+					<div id="log"></div>
+				</center>
+		</div>
+		<script>
+		var log = document.querySelector("#log");
+
+		var idq1 = document.querySelector("#rep1"),
+		idq2 = document.querySelector("#rep2"),
+		idq3 = document.querySelector("#rep3"),
+		idq4 = document.querySelector("#rep4"),
+		idq5 = document.querySelector("#rep5");
+
+		function $_GET(param) {
+			var vars = {};
+			window.location.href.replace( location.hash, '' ).replace(/[?&]+([^=&]+)=?([^&]*)?/gi, // regexp
+				function( m, key, value ) { // callback
+					vars[key] = value !== undefined ? value : '';
+				}
+			);
+
+			if ( param ) {
+				return vars[param] ? vars[param] : null;
+			}
+			return vars;
+		}
+		var r1 = $_GET('question1'),
+    	r2 = $_GET('question2'),
+    	r3 = $_GET('question3'),
+    	r4 = $_GET('question4'),
+    	r5 = $_GET('question5');
+    	idq1.innerText = r1;
+    	idq2.innerText = r2;
+    	idq3.innerText = r3;
+    	idq4.innerText = r4;
+    	idq5.innerText = r5;
+		</script>
+	</body>
+</html>
